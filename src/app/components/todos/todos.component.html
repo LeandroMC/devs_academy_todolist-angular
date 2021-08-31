@@ -1,7 +1,4 @@
-<form id="form">
-  <input type="text" name="tf_2do" id="tf_2do" autocomplete="off" />
-  <button type="submit">Salvar</button>
-</form>
+<app-create-todo></app-create-todo>
 <table id="table">
   <tr *ngFor="let todo of todos">
     <td>
@@ -9,7 +6,7 @@
     </td>
     <td class="text">{{ todo.text }}</td>
     <td>
-      <button (click)="removeTodo(todo.id)">X</button>
+      <button>X</button>
     </td>
   </tr>
 </table>
