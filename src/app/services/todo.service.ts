@@ -2,21 +2,9 @@ import { Injectable } from '@angular/core';
 import { Todo } from '../models/Todo';
 
 const todos: Todo[] = [
-  {
-    text: 'Vestibulum sed magna at nunc commodo placerat.',
-    priority: 2,
-    done: false,
-  },
-  {
-    text: 'Nullam porttitor lacus at turpis.',
-    priority: 1,
-    done: true,
-  },
-  {
-    text: 'Nulla mollis molestie lorem. Quisque ut erat.',
-    priority: 3,
-    done: false,
-  },
+  new Todo('Vestibulum sed magna at nunc commodo placerat.', 2, false),
+  new Todo('Nullam porttitor lacus at turpis.', 1, true),
+  new Todo('Nulla mollis molestie lorem. Quisque ut erat.', 3, false),
 ];
 
 @Injectable({
@@ -29,6 +17,10 @@ export class TodoService {
 
   addTodo(todo: Todo): void {
     todos.push(todo);
+  }
+
+  deleteTodo(todo: Todo) {
+    todos.splice(todos.indexOf(todo), 1);
   }
   constructor() {}
 }
