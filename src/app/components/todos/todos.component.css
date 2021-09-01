@@ -1,7 +1,6 @@
-.form {
-  border: 2px solid black;
+.checkbox {
 }
 
-.table {
-  border: 2px solid black;
+.done {
+  text-decoration: line-through;
 }

@@ -1,9 +1,16 @@
 <table id="table">
   <tr *ngFor="let todo of todos">
     <td>
-      <input type="checkbox" class="checkbox" />
+      <input
+        (click)="handleCheckbox(todo)"
+        type="checkbox"
+        id="checkbox-{{ todo.id }}"
+        [checked]="todo.done"
+      />
     </td>
-    <td class="text">{{ todo.text }}</td>
+    <td id="text-{{ todo.id }}" [ngClass]="{ done: todo.done }">
+      {{ todo.text }}
+    </td>
     <td>
       <button (click)="deleteTodo(todo)">X</button>
     </td>
