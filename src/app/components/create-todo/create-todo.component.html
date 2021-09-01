@@ -1,6 +1,7 @@
 <form id="form">
   <input
     (change)="setNewTodoName($event)"
+    (keydown.enter)="$event.preventDefault()"
     [value]="newTodoName"
     type="text"
     name="tf_2do"

@@ -23,6 +23,10 @@ export class CreateTodoComponent implements OnInit {
   }
 
   createNewTodo(): void {
+    if (!this.newTodoName) {
+      alert('Por favor digite uma descrição para a tarefa!');
+      return;
+    }
     this.todoService.addTodo(new Todo(this.newTodoName));
     this.newTodoName = '';
     console.log(`A new task was created: `);
