@@ -13,14 +13,6 @@ form input {
   margin-right: 5px;
 }
 
-/* form button {
-  width: 100px;
-  height: 35px;
-  display: block;
-  font-size: 0.7rem;
-  border: none;
-} */
-
 form button {
   cursor: pointer;
   opacity: 0.8;

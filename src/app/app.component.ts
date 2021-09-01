@@ -10,11 +10,4 @@ import { TodoService } from './services/todo.service';
 })
 export class AppComponent {
   title = 'TodoList-angular';
-
-  // private todoService: TodoService = new TodoService();
-
-  // setNewTodo(todoName: any) {
-  //   this.todoService.addTodo(new Todo(todoName));
-  //   console.log(todoName);
-  // }
 }

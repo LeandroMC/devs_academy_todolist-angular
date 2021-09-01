@@ -17,13 +17,6 @@ export class CreateTodoComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // addTodo(e: any): void {
-  //   this.newTodoName = e.target.value;
-  //   this.createTodoEmitter.emit(this.newTodoName);
-  //   this.newTodoName = '';
-  //   console.log('test');
-  // }
-
   setNewTodoName(e: Event) {
     this.newTodoName = (<HTMLInputElement>e.target).value;
     console.log(this.newTodoName);

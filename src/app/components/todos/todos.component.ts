@@ -8,9 +8,6 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./todos.component.css'],
 })
 export class TodosComponent implements OnInit {
-  // removeTodo(id: string) {
-  //   this.todos = this.todos.filter((todo) => todo.id !== id);
-  // }
   private todoService: TodoService = new TodoService();
   public todos: Todo[];
 

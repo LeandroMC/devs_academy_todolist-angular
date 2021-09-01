@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../models/Todo';
 
-const todos: Todo[] = [
-  new Todo('Vestibulum sed magna at nunc commodo placerat.', 2, false),
-  new Todo('Nullam porttitor lacus at turpis.', 1, true),
-  new Todo('Nulla mollis molestie lorem. Quisque ut erat.', 3, false),
-];
+const todos: Todo[] = [];
 
 @Injectable({
   providedIn: 'root',
