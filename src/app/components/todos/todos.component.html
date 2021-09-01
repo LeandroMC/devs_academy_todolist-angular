@@ -8,6 +8,23 @@
         [checked]="todo.done"
       />
     </td>
+    <td>
+      <select
+        name="priority"
+        id="priority"
+        (change)="handleDropdown($event, todo)"
+      >
+        <option
+          value="{{ i + 1 }}"
+          *ngFor="let item of [].constructor(3); let i = index"
+          [selected]="todo.priority === i + 1"
+        >
+          {{ i + 1 }}
+        </option>
+        <!-- <option value="2" selected>2</option>
+        <option value="3">3</option> -->
+      </select>
+    </td>
     <td id="text-{{ todo.id }}" [ngClass]="{ done: todo.done }">
       {{ todo.text }}
     </td>

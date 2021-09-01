@@ -37,4 +37,8 @@ export class TodosComponent implements OnInit {
       text?.classList.remove('done');
     }
   }
+
+  handleDropdown(e: Event, todo: Todo) {
+    todo.priority = +(<HTMLSelectElement>e.target).value;
+  }
 }
