@@ -25,6 +25,8 @@ export class CreateTodoComponent implements OnInit {
   createNewTodo(): void {
     this.todoService.addTodo(new Todo(this.newTodoName));
     this.newTodoName = '';
+    console.log(`A new task was created: `);
+    console.log(this.todoService.getTodos().slice(-1));
     console.log(this.todoService.getTodos());
   }
 }
