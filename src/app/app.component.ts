@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { Todo } from './models/Todo';
 import { TodoService } from './services/todo.service';
 

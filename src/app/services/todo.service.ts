@@ -19,8 +19,8 @@ export class TodoService {
     todos.push(todo);
   }
 
-  deleteTodo(todo: Todo): void {
-    todos.splice(todos.indexOf(todo), 1);
+  deleteTodo(todo: Todo): Todo[] {
+    return todos.splice(todos.indexOf(todo), 1);
   }
 
   isDone(todo: Todo): void {

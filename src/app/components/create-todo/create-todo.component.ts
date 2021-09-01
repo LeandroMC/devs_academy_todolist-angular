@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Todo } from 'src/app/models/Todo';
+import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
   selector: 'app-create-todo',
@@ -9,6 +11,7 @@ export class CreateTodoComponent implements OnInit {
   @Output() createTodoEmitter: EventEmitter<string> = new EventEmitter();
 
   newTodoName: string = '';
+  todoService: TodoService = new TodoService();
 
   constructor() {}
 
@@ -20,4 +23,15 @@ export class CreateTodoComponent implements OnInit {
   //   this.newTodoName = '';
   //   console.log('test');
   // }
+
+  setNewTodoName(e: Event) {
+    this.newTodoName = (<HTMLInputElement>e.target).value;
+    console.log(this.newTodoName);
+  }
+
+  createNewTodo(): void {
+    this.todoService.addTodo(new Todo(this.newTodoName));
+    this.newTodoName = '';
+    console.log(this.todoService.getTodos());
+  }
 }

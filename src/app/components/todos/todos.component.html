@@ -1,6 +1,10 @@
 <table id="table">
-  <tr *ngFor="let todo of todos">
-    <td>
+  <tr
+    *ngFor="let todo of todos"
+    class="row"
+    style="border-bottom: 2px solid green"
+  >
+    <td class="checkbox">
       <input
         (click)="handleCheckbox(todo)"
         type="checkbox"
@@ -8,7 +12,7 @@
         [checked]="todo.done"
       />
     </td>
-    <td>
+    <td class="dropdown">
       <select
         name="priority"
         id="priority"
@@ -25,11 +29,13 @@
         <option value="3">3</option> -->
       </select>
     </td>
-    <td id="text-{{ todo.id }}" [ngClass]="{ done: todo.done }">
+    <td id="text-{{ todo.id }}" [ngClass]="{ done: todo.done }" class="text">
       {{ todo.text }}
     </td>
-    <td>
-      <button (click)="deleteTodo(todo)">X</button>
+    <td class="button">
+      <span (click)="deleteTodo(todo)">
+        <i class="material-icons"> delete_forever </i>
+      </span>
     </td>
   </tr>
 </table>
